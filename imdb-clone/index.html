@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb | Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#" class="logo">IMDb<span>+</span></a>
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <nav id="navLinks">
+            <a href="#trending">Movies</a>
+            <a href="#popular">Popular</a>
+            <a href="#top-rated">Top Rated</a>
+            <a href="#coming-soon">Coming Soon</a>
+        </nav>
+
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search movies...">
+            <button id="searchBtn">⌕</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: HERO -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">YOUR MOVIE DESTINATION</span>
+                <h1>Discover your next <span>favorite</span> movie.</h1>
+                <p>
+                    Explore trending films, discover unforgettable stories,
+                    and find your next movie night favorite.
+                </p>
+                <div class="hero-actions">
+                    <a href="#trending" class="btn btn-yellow">
+                        ▶ Explore Movies
+                    </a>
+                    <a href="#top-rated" class="btn btn-outline">
+                        Top Rated
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div><strong>100+</strong><small>Movies to explore</small></div>
+                    <div><strong>4.8/5</strong><small>Sample user rating</small></div>
+                </div>
+            </div>
+            <div class="hero-poster">
+                <img
+                  src="https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+                  alt="Oppenheimer movie poster">
+                <div class="poster-label">FEATURED MOVIE</div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TRENDING -->
+        <section class="section" id="trending">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">WHAT'S HOT</span>
+                    <h2>Trending Now</h2>
+                </div>
+                <span class="section-note">Popular picks this week</span>
+            </div>
+            <div class="movie-grid" id="trendingGrid">
+                <article class="movie-card" data-title="Dune Part Two">
+                    <img src="https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg" alt="Dune Part Two poster">
+                    <div class="movie-info">
+                        <p class="rating">★ <span>8.5</span></p>
+                        <h3>Dune: Part Two</h3>
+                        <p class="meta">2024 · Sci-Fi</p>
+                        <button class="watch-btn">＋ Watchlist</button>
+                    </div>
+                </article>
+
+                <article class="movie-card" data-title="Oppenheimer">
+                    <img src="https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg" alt="Oppenheimer poster">
+                    <div class="movie-info">
+                        <p class="rating">★ <span>8.3</span></p>
+                        <h3>Oppenheimer</h3>
+                        <p class="meta">2023 · Drama</p>
+                        <button class="watch-btn">＋ Watchlist</button>
+                    </div>
+                </article>
+
+                <article class="movie-card" data-title="Interstellar">
+                    <img src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Interstellar poster">
+                    <div class="movie-info">
+                        <p class="rating">★ <span>8.7</span></p>
+                        <h3>Interstellar</h3>
+                        <p class="meta">2014 · Adventure</p>
+                        <button class="watch-btn">＋ Watchlist</button>
+                    </div>
+                </article>
+
+                <article class="movie-card" data-title="The Batman">
+                    <img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg" alt="The Batman poster">
+                    <div class="movie-info">
+                        <p class="rating">★ <span>7.8</span></p>
+                        <h3>The Batman</h3>
+                        <p class="meta">2022 · Action</p>
+                        <button class="watch-btn">＋ Watchlist</button>
+                    </div>
+                </article>
+            </div>
+            <p class="empty-message" hidden>No matching movies found.</p>
+        </section>
+
+        <!-- SECTION 3: POPULAR -->
+        <section class="section alternate" id="popular">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FAN FAVORITES</span>
+                    <h2>Popular Movies</h2>
+                </div>
+                <span class="section-note">Stories worth watching</span>
+            </div>
+
+            <div class="movie-grid">
+                <article class="movie-card" data-title="Spider-Man Across the Spider-Verse">
+                    <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Spider-Man Across the Spider-Verse poster">
+                    <div class="movie-info">
+                        <p class="rating">★ <span>8.6</span></p>
+                        <h3>Spider-Man: Across the Spider-Verse</h3>
+                        <p class="meta">2023 · Animation</p>
+                        <button class="watch-btn">＋ Watchlist</button>
+                    </div>
+                </article>
+
+                <article class="movie-card" data-title="Guardians of the Galaxy Vol 3">
+                    <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="Guardians of the Galaxy Vol 3 poster">
+                    <div class="movie-info">
+                        <p class="rating">★ <span>7.9</span></p>
+                        <h3>Guardians of the Galaxy Vol. 3</h3>
+                        <p class="meta">2023 · Adventure</p>
+                        <button class="watch-btn">＋ Watchlist</button>
+                    </div>
+                </article>
+
+                <article class="movie-card" data-title="Avatar The Way of Water">
+                    <img src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Avatar The Way of Water poster">
+                    <div class="movie-info">
+                        <p class="rating">★ <span>7.5</span></p>
+                        <h3>Avatar: The Way of Water</h3>
+                        <p class="meta">2022 · Fantasy</p>
+                        <button class="watch-btn">＋ Watchlist</button>
+                    </div>
+                </article>
+
+                <article class="movie-card" data-title="Top Gun Maverick">
+                    <img src="https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="Top Gun Maverick poster">
+                    <div class="movie-info">
+                        <p class="rating">★ <span>8.2</span></p>
+                        <h3>Top Gun: Maverick</h3>
+                        <p class="meta">2022 · Action</p>
+                        <button class="watch-btn">＋ Watchlist</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4: TOP RATED -->
+        <section class="section" id="top-rated">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">HIGHEST-RATED PICKS</span>
+                    <h2>Top Rated</h2>
+                </div>
+                <span class="section-note">Classic and modern favorites</span>
+            </div>
+
+            <div class="top-list">
+                <div class="top-item">
+                    <span class="rank">01</span>
+                    <img src="https://image.tmdb.org/t/p/w200/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="The Shawshank Redemption poster">
+                    <div class="top-details">
+                        <h3>The Shawshank Redemption</h3>
+                        <p>1994 · Drama</p>
+                    </div>
+                    <strong class="top-rating">★ 9.3</strong>
+                </div>
+                <div class="top-item">
+                    <span class="rank">02</span>
+                    <img src="https://image.tmdb.org/t/p/w200/8OKmBV5BUFzmozIC3pPWKHy17kx.jpg" alt="The Godfather poster">
+                    <div class="top-details">
+                        <h3>The Godfather</h3>
+                        <p>1972 · Crime, Drama</p>
+                    </div>
+                    <strong class="top-rating">★ 9.2</strong>
+                </div>
+                <div class="top-item">
+                    <span class="rank">03</span>
+                    <img src="https://image.tmdb.org/t/p/w200/lyQBXzOQSuE59IsHyhrp0qIiPAz.jpg" alt="The Dark Knight poster">
+                    <div class="top-details">
+                        <h3>The Dark Knight</h3>
+                        <p>2008 · Action, Crime</p>
+                    </div>
+                    <strong class="top-rating">★ 9.0</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: COMING SOON -->
+        <section class="section coming-section" id="coming-soon">
+            <span class="eyebrow">SAVE THE DATE</span>
+            <h2>Coming Soon</h2>
+            <p class="coming-description">
+                The next great story is just around the corner.
+                Keep exploring and discover what's next.
+            </p>
+            <div class="coming-cards">
+                <div class="coming-card">
+                    <span>01 / UPCOMING</span>
+                    <h3>New Adventures</h3>
+                    <p>Discover new worlds and unforgettable characters.</p>
+                </div>
+                <div class="coming-card">
+                    <span>02 / UPCOMING</span>
+                    <h3>More Thrills</h3>
+                    <p>Find your next action, drama, or mystery favorite.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: WATCHLIST -->
+        <section class="section watchlist-section" id="watchlist">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">YOUR COLLECTION</span>
+                    <h2>My Watchlist</h2>
+                </div>
+                <span id="watchlistCount" class="section-note">0 movies saved</span>
+            </div>
+            <div id="watchlistItems" class="saved-list">
+                <p class="empty-watchlist">Your watchlist is empty. Add movies above!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#home" class="logo">IMDb<span>+</span></a>
+        <p>A movie discovery website made for learning and creativity.</p>
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#trending">Movies</a>
+            <a href="#watchlist">My Watchlist</a>
+        </div>
+        <small>© 2026 Movie Explorer · Student Web Design Project</small>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
